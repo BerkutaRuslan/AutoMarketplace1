@@ -1,0 +1,52 @@
+[
+  {
+    "model": "vehicle.vehicletype",
+    "pk": 1,
+    "fields": {
+      "name": "Auto",
+      "photo": "vehicletype/fb406a2c-2ed4-470f-8b7c-b14afdac924d.png",
+      "description": "Here you can find awesome cars special for you!"
+    }
+  },
+  {
+    "model": "vehicle.vehicletype",
+    "pk": 2,
+    "fields": {
+      "name": "Motorcycle",
+      "photo": "vehicletype/af60fcd0-efaf-4f7d-a304-232624380de9.png",
+      "description": "Here you can find awesome motorcycles special for you!"
+    }
+  },
+  {
+    "model": "vehicle.vehicletype",
+    "pk": 3,
+    "fields": {
+      "name": "Boat",
+      "photo": "vehicletype/3ffc43b0-9f92-4546-b97a-bfe142307e2b.png",
+      "description": "Here you can find awesome boats special for you!"
+    }
+  },
+  {
+    "model": "vehicle.vehicletype",
+    "pk": 4,
+    "fields": {
+      "name": "Plane",
+      "photo": "vehicletype/3bbq43b0-9f92-4546-b97a-bfe142307e2b.png",
+      "description": "Here you can find awesome planes special for you!"
+    }
+  },
+  {
+    "model": "vehicle.singlevehicle",
+    "pk": 1,
+    "fields": {
+      "name": "Ford Focus 2",
+      "photo": "93030e1e-40ea-436d-a674-fe95241ef239.jpg",
+      "description": "Cool & budget car for young people!",
+      "price": 3500,
+      "year": "2007-08-24",
+      "horse_power": 90,
+      "engine_cc": 1600,
+      "vehicle_type": 1
+    }
+  }
+]

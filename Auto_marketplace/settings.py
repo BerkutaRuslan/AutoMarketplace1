@@ -119,9 +119,10 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-MEDIA_ROOT = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 UPLOAD_DIR = MEDIA_ROOT
-
+VEHICLE_DEFAULT_COVER_PATH = 'vehicle/default.png'
+VEHICLE_TYPE_DEFAULT_COVER_PATH = 'vehicle_type/default.png'
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
