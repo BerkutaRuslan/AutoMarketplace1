@@ -48,5 +48,64 @@
       "engine_cc": 1600,
       "vehicle_type": 1
     }
+  },
+  {
+    "model": "vehicle.singlevehicle",
+    "pk": 1,
+    "fields": {
+      "name": "Ford Focus 2",
+      "photo": "93030e1e-40ea-436d-a674-fe95241ef239.jpg",
+      "description": "Cool & budget car for young people!",
+      "price": 3500,
+      "year": "2007-08-24",
+      "horse_power": 90,
+      "engine_cc": 1600,
+      "vehicle_type": 1
+    }
+  },
+  {
+    "model": "vehicle.singlevehicle",
+    "pk": 1,
+    "fields": {
+      "name": "Ford Focus 2",
+      "photo": "93030e1e-40ea-436d-a674-fe95241ef239.jpg",
+      "description": "Cool & budget car for young people!",
+      "price": 3500,
+      "year": "2007-08-24",
+      "horse_power": 90,
+      "engine_cc": 1600,
+      "vehicle_type": 1
+    }
+  },
+  {
+    "model": "vehicle.singlevehicle",
+    "pk": 1,
+    "fields": {
+      "name": "Ford Focus 2",
+      "photo": "93030e1e-40ea-436d-a674-fe95241ef239.jpg",
+      "description": "Cool & budget car for young people!",
+      "price": 3500,
+      "year": "2007-08-24",
+      "horse_power": 90,
+      "engine_cc": 1600,
+      "vehicle_type": 1
+    }
+  },
+  {
+    "model": "vehicle.singlevehicle",
+    "pk": 1,
+    "fields": {
+      "name": "VW Golf V",
+      "photo": "93030e1e-40ea-436d-a674-fe95241ef239.jpg",
+      "description": "Hello, selling this car, the condition is really good!",
+      "price": 8000,
+      "year": "2015-08-24",
+      "horse_power": 200,
+      "engine_cc": 2000,
+      "vehicle_type": 1,
+      "vehicle_appointment": "Road",
+      "condition": "Minimal Wear",
+      "is_new": "False"
+    }
   }
 ]
