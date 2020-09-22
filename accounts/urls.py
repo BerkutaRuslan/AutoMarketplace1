@@ -3,7 +3,8 @@ from django.urls import path
 from accounts.views import *
 
 urlpatterns = [
-    path('sign-in-request', SignInRequestView.as_view(), name='SignInRequest')
+    path('sign-in-request', SignInRequestView.as_view(), name='SignInRequest'),
+    path('sign-in-verify', SignInVerifyView.as_view(), name='signInVerify'),
 ]
 #     path('sign-up-as-company', SignUpAsCompanyView.as_view(), name='signUpAsCompany'),
 #     path('sign-in', SignInView.as_view(), name='signIn'),
