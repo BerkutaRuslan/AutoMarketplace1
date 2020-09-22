@@ -39,6 +39,11 @@ LOCAL_APPS = [
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
+AUTH_USER_MODEL = 'accounts.User'
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend'
+]
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -119,6 +124,13 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# Twilio
+PHONENUMBER_DB_FORMAT = 'INTERNATIONAL'
+PHONENUMBER_DEFAULT_REGION = 'UA'  # Ukraine
+TWILIO_ACCOUNT_SID = os.environ.get('TWILIO_ACCOUNT_SID')
+TWILIO_AUTH_TOKEN = os.environ.get('TWILIO_AUTH_TOKEN')
+TWILIO_NUMBER = os.environ.get('TWILIO_NUMBER')
+
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 UPLOAD_DIR = MEDIA_ROOT
 VEHICLE_DEFAULT_COVER_PATH = 'vehicle/default.png'
@@ -128,7 +140,7 @@ VEHICLE_TYPE_DEFAULT_COVER_PATH = 'vehicle_type/default.png'
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Kiev'
 
 USE_I18N = True
 
