@@ -2,12 +2,12 @@ from django.utils import timezone
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.exceptions import ValidationError
-from rest_framework.permissions import AllowAny
+from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.views import APIView
 from rest_framework.authtoken.models import Token
 
 from accounts.serializers import UserPhoneSerializer, SignInRequestSerializer, UserFullSerializer, \
-    SignInVerifySerializer
+    SignInVerifySerializer, UserUpdateSerializer
 from accounts.utils import send_sms_code
 
 
@@ -71,3 +71,41 @@ class SignInVerifyView(APIView):
         else:
             return Response({'error': serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
 
+
+class UserProfileSetupView(APIView):
+    """
+    An endpoint for updating email, first name and last name
+    """
+    permission_classes = [IsAuthenticated]
+    serializer_class = UserUpdateSerializer
+
+    def post(self, request):
+        serializer = self.serializer_class(instance=request.user, data=request.data)
+        if serializer.is_valid():
+            user = serializer.save()
+            user_serializer = UserFullSerializer(user)
+            return Response({'user': user_serializer.data}, status=status.HTTP_200_OK)
+        else:
+            return Response({'error': serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
+
+
+class UserProfileView(APIView):
+    """
+    An endpoint for retrieving or updating User
+    """
+    permission_classes = [IsAuthenticated]
+    serializer_class = UserFullSerializer
+
+    def get(self, request):
+        user = request.user
+        data = self.serializer_class(user).data
+        return Response({'user': data}, status=status.HTTP_200_OK)
+
+    def put(self, request):
+        serializer = UserUpdateSerializer(instance=request.user, data=request.data, partial=True)
+        if serializer.is_valid():
+            user = serializer.save()
+            user_serializer = UserFullSerializer(user)
+            return Response({'user': user_serializer.data}, status=status.HTTP_200_OK)
+        else:
+            return Response({'error': serializer.errors}, status=status.HTTP_400_BAD_REQUEST)

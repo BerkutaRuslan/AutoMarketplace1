@@ -76,3 +76,22 @@ class SignInVerifySerializer(serializers.Serializer):
         else:
             msg = 'Must provide phonenumber in international format.'
             raise exceptions.ValidationError(msg)
+
+
+class UserUpdateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ('email', 'first_name', 'last_name')
+
+    def validate(self, attrs):
+        email = attrs.get('email', None)
+        try:
+            user = User.objects.get(email__iexact=email)
+        except User.DoesNotExist:
+            return attrs  # update user profile
+        else:
+            if email == self.instance.email:
+                return attrs
+            else:
+                msg = 'This email is already used'
+                raise exceptions.ValidationError(msg)
