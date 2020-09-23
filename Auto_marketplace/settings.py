@@ -9,6 +9,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 DEBUG = True
 
+HOST = os.environ.get('HOST')
 DJANGO_SETTINGS_MODULE = os.getenv('DJANGO_SETTINGS_MODULE')
 
 ALLOWED_HOSTS = ['*']
@@ -130,6 +131,13 @@ PHONENUMBER_DEFAULT_REGION = 'UA'  # Ukraine
 TWILIO_ACCOUNT_SID = os.environ.get('TWILIO_ACCOUNT_SID')
 TWILIO_AUTH_TOKEN = os.environ.get('TWILIO_AUTH_TOKEN')
 TWILIO_NUMBER = os.environ.get('TWILIO_NUMBER')
+
+#SendGrid
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'apikey'
+EMAIL_HOST_PASSWORD = os.environ.get('SENDGRID_API_KEY')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 UPLOAD_DIR = MEDIA_ROOT

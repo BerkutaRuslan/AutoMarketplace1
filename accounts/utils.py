@@ -1,4 +1,5 @@
 import random
+from secrets import token_urlsafe
 
 from django.conf import settings
 from twilio.rest import Client
@@ -22,3 +23,7 @@ def send_sms_code(user_phone):
         return None
     else:
         return code
+
+
+def generate_token(length=16):
+    return token_urlsafe(length)
