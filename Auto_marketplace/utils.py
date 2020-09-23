@@ -8,15 +8,6 @@ def generate_token(length=7):
     return token_urlsafe(length)
 
 
-def get_file_path(instance, filename):
-    """
-    Rename images
-    """
-    ext = filename.split('.')[-1]
-    filename = "%s.%s" % (uuid.uuid4(), ext)
-    return os.path.join(instance.__class__.__name__.lower(), filename)
-
-
 def send_email(subject, user, template, content, from_email, attachments=[]):
     to = user if isinstance(user, list) else [user]
     ctx = {'content': content}

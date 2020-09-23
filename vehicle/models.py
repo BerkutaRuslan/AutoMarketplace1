@@ -1,16 +1,16 @@
 from colorfield.fields import ColorField
 from django.db import models
 from Auto_marketplace import settings
-from Auto_marketplace.utils import get_file_path
 
 
 class VehicleType(models.Model):
     name = models.CharField(max_length=124)
-    photo = models.FileField(upload_to=get_file_path, default=settings.VEHICLE_TYPE_DEFAULT_COVER_PATH)
+    photo = models.ImageField(upload_to='media/vehicletype', default=settings.VEHICLE_TYPE_DEFAULT_COVER_PATH)
     description = models.TextField(blank=True)
 
     def __str__(self):
         return self.name
+
 
 appointment_choice = (
     ('Road', 'Road'),
@@ -28,7 +28,7 @@ condition_choice = (
 
 class SingleVehicle(models.Model):
     name = models.CharField(max_length=50)
-    photo = models.FileField(upload_to=get_file_path, default=settings.VEHICLE_DEFAULT_COVER_PATH)
+    photo = models.ImageField(upload_to='media/each_vehicle', default=settings.VEHICLE_DEFAULT_COVER_PATH)
     description = models.TextField(max_length=500)
     price = models.IntegerField()
     year = models.DateField()

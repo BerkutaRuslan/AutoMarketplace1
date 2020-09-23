@@ -139,7 +139,8 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'apikey'
 EMAIL_HOST_PASSWORD = os.environ.get('SENDGRID_API_KEY')
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+MEDIA_URL = '/media/'
 UPLOAD_DIR = MEDIA_ROOT
 VEHICLE_DEFAULT_COVER_PATH = 'vehicle/default.png'
 VEHICLE_TYPE_DEFAULT_COVER_PATH = 'vehicle_type/default.png'

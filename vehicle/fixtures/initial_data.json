@@ -40,7 +40,7 @@
     "pk": 1,
     "fields": {
       "name": "Ford Focus 2",
-      "photo": "93030e1e-40ea-436d-a674-fe95241ef239.jpg",
+      "photo": "each_vehicle/93030e1e-40ea-436d-a674-fe95241ef239.jpg",
       "description": "Cool & budget car for young people!",
       "price": 3500,
       "year": "2007-08-24",
@@ -57,7 +57,7 @@
     "pk": 2,
     "fields": {
       "name": "Audi TT",
-      "photo": "12345e1e-40ea-436d-a674-fe95241ef239.jpg",
+      "photo": "vehicles/12345e1e-40ea-436d-a674-fe95241ef239.jpg",
       "description": "Very fast and aggressive car!",
       "price": 12500,
       "year": "2010-08-24",
@@ -74,7 +74,7 @@
     "pk": 3,
     "fields": {
       "name": "Nissan Skyline",
-      "photo": "54321e1e-40ea-436d-a674-fe95241ef239.jpg",
+      "photo": "vehicles/54321e1e-40ea-436d-a674-fe95241ef239.jpg",
       "description": "Oldschool drift vehicle just for you!",
       "price": 25000,
       "year": "1991-08-24",
@@ -91,7 +91,7 @@
     "pk": 4,
     "fields": {
       "name": "Ford F150",
-      "photo": "53421e1e-40ea-436d-a674-fe95241ef239.jpg",
+      "photo": "vehicles/53421e1e-40ea-436d-a674-fe95241ef239.jpg",
       "description": "Great automobile for long trips & work on it!",
       "price": 62000,
       "year": "2018-08-24",
@@ -108,7 +108,7 @@
     "pk": 5,
     "fields": {
       "name": "Geon X-Ride 125",
-      "photo": "09876e1e-40ea-436d-a674-fe95241ef239.jpg",
+      "photo": "vehicles/09876e1e-40ea-436d-a674-fe95241ef239.jpg",
       "description": "Great Motorcycle for rides in forest and offroad!",
       "price": 990,
       "year": "2015-08-24",
@@ -125,7 +125,7 @@
     "pk": 6,
     "fields": {
       "name": "KTM 690",
-      "photo": "76543e1e-40ea-436d-a674-fe95241ef239.jpg",
+      "photo": "vehicles/76543e1e-40ea-436d-a674-fe95241ef239.jpg",
       "description": "Perfect Motorcycle, very comfortable and suits for rides in the offroad & also its really good on roads!",
       "price": 12500,
       "year": "2018-08-24",
@@ -142,7 +142,7 @@
     "pk": 7,
     "fields": {
       "name": "Jobe Tower Bimini",
-      "photo": "58432e1e-40ea-436d-a674-fe95241ef239.jpg",
+      "photo": "vehicles/58432e1e-40ea-436d-a674-fe95241ef239.jpg",
       "description": "Comfortable boat for fishing!",
       "price": 800,
       "year": "2005-08-24",
@@ -159,7 +159,7 @@
     "pk": 8,
     "fields": {
       "name": "Sublue WhiteShark Mix",
-      "photo": "90897e1e-40ea-436d-a674-fe95241ef239.jpg",
+      "photo": "vehicles/90897e1e-40ea-436d-a674-fe95241ef239.jpg",
       "description": "Best aquascooter, cheap and has high quality!",
       "price": 400,
       "year": "2019-08-24",
@@ -176,7 +176,7 @@
     "pk": 9,
     "fields": {
       "name": "Faeta",
-      "photo": "06953e1e-40ea-436d-a674-fe95241ef239.jpg",
+      "photo": "vehicles/06953e1e-40ea-436d-a674-fe95241ef239.jpg",
       "description": "Perfect plane, but the price is off beacause of the scratch on the window!",
       "price": 150000,
       "year": "2012-08-24",
@@ -193,7 +193,7 @@
     "pk": 10,
     "fields": {
       "name": "Robinson R44",
-      "photo": "86978e1e-40ea-436d-a674-fe95241ef239.jpg",
+      "photo": "vehicles/86978e1e-40ea-436d-a674-fe95241ef239.jpg",
       "description": "Perfect chop",
       "price": 120500,
       "year": "2015-08-24",
