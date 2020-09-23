@@ -27,7 +27,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=50)),
-                ('photo', models.ImageField(default='vehicle/default.png', upload_to='media/each_vehicle')),
+                ('photo', models.ImageField(default='vehicle/default.png', upload_to='media/vehicles')),
                 ('description', models.TextField(max_length=500)),
                 ('price', models.IntegerField()),
                 ('year', models.DateField()),
