@@ -46,66 +46,163 @@
       "year": "2007-08-24",
       "horse_power": 90,
       "engine_cc": 1600,
-      "vehicle_type": 1
-    }
-  },
-  {
-    "model": "vehicle.singlevehicle",
-    "pk": 1,
-    "fields": {
-      "name": "Ford Focus 2",
-      "photo": "93030e1e-40ea-436d-a674-fe95241ef239.jpg",
-      "description": "Cool & budget car for young people!",
-      "price": 3500,
-      "year": "2007-08-24",
-      "horse_power": 90,
-      "engine_cc": 1600,
-      "vehicle_type": 1
-    }
-  },
-  {
-    "model": "vehicle.singlevehicle",
-    "pk": 1,
-    "fields": {
-      "name": "Ford Focus 2",
-      "photo": "93030e1e-40ea-436d-a674-fe95241ef239.jpg",
-      "description": "Cool & budget car for young people!",
-      "price": 3500,
-      "year": "2007-08-24",
-      "horse_power": 90,
-      "engine_cc": 1600,
-      "vehicle_type": 1
-    }
-  },
-  {
-    "model": "vehicle.singlevehicle",
-    "pk": 1,
-    "fields": {
-      "name": "Ford Focus 2",
-      "photo": "93030e1e-40ea-436d-a674-fe95241ef239.jpg",
-      "description": "Cool & budget car for young people!",
-      "price": 3500,
-      "year": "2007-08-24",
-      "horse_power": 90,
-      "engine_cc": 1600,
-      "vehicle_type": 1
-    }
-  },
-  {
-    "model": "vehicle.singlevehicle",
-    "pk": 1,
-    "fields": {
-      "name": "VW Golf V",
-      "photo": "93030e1e-40ea-436d-a674-fe95241ef239.jpg",
-      "description": "Hello, selling this car, the condition is really good!",
-      "price": 8000,
-      "year": "2015-08-24",
-      "horse_power": 200,
-      "engine_cc": 2000,
       "vehicle_type": 1,
       "vehicle_appointment": "Road",
       "condition": "Minimal Wear",
       "is_new": "False"
+    }
+  },
+  {
+    "model": "vehicle.singlevehicle",
+    "pk": 2,
+    "fields": {
+      "name": "Audi TT",
+      "photo": "12345e1e-40ea-436d-a674-fe95241ef239.jpg",
+      "description": "Very fast and aggressive car!",
+      "price": 12500,
+      "year": "2010-08-24",
+      "horse_power": 210,
+      "engine_cc": 2000,
+      "vehicle_type": 1,
+      "vehicle_appointment": "Road",
+      "condition": "Field Tested",
+      "is_new": "False"
+    }
+  },
+  {
+    "model": "vehicle.singlevehicle",
+    "pk": 3,
+    "fields": {
+      "name": "Nissan Skyline",
+      "photo": "54321e1e-40ea-436d-a674-fe95241ef239.jpg",
+      "description": "Oldschool drift vehicle just for you!",
+      "price": 25000,
+      "year": "1991-08-24",
+      "horse_power": 540,
+      "engine_cc": 2400,
+      "vehicle_type": 1,
+      "vehicle_appointment": "Road",
+      "condition": "Minimal Wear",
+      "is_new": "False"
+    }
+  },
+  {
+    "model": "vehicle.singlevehicle",
+    "pk": 4,
+    "fields": {
+      "name": "Ford F150",
+      "photo": "53421e1e-40ea-436d-a674-fe95241ef239.jpg",
+      "description": "Great automobile for long trips & work on it!",
+      "price": 62000,
+      "year": "2018-08-24",
+      "horse_power": 300,
+      "engine_cc": 4200,
+      "vehicle_type": 1,
+      "vehicle_appointment": "Road",
+      "condition": "Factory New",
+      "is_new": "True"
+    }
+  },
+  {
+    "model": "vehicle.singlevehicle",
+    "pk": 5,
+    "fields": {
+      "name": "Geon X-Ride 125",
+      "photo": "09876e1e-40ea-436d-a674-fe95241ef239.jpg",
+      "description": "Great Motorcycle for rides in forest and offroad!",
+      "price": 990,
+      "year": "2015-08-24",
+      "horse_power": 9,
+      "engine_cc": 125,
+      "vehicle_type": 2,
+      "vehicle_appointment": "Road",
+      "condition": "Factory New",
+      "is_new": "True"
+    }
+  },
+  {
+    "model": "vehicle.singlevehicle",
+    "pk": 6,
+    "fields": {
+      "name": "KTM 690",
+      "photo": "76543e1e-40ea-436d-a674-fe95241ef239.jpg",
+      "description": "Perfect Motorcycle, very comfortable and suits for rides in the offroad & also its really good on roads!",
+      "price": 12500,
+      "year": "2018-08-24",
+      "horse_power": 60,
+      "engine_cc": 690,
+      "vehicle_type": 2,
+      "vehicle_appointment": "Road",
+      "condition": "Factory New",
+      "is_new": "True"
+    }
+  },
+    {
+    "model": "vehicle.singlevehicle",
+    "pk": 7,
+    "fields": {
+      "name": "Jobe Tower Bimini",
+      "photo": "58432e1e-40ea-436d-a674-fe95241ef239.jpg",
+      "description": "Comfortable boat for fishing!",
+      "price": 800,
+      "year": "2005-08-24",
+      "horse_power": 30,
+      "engine_cc": 600,
+      "vehicle_type": 3,
+      "vehicle_appointment": "Water",
+      "condition": "Field Tested",
+      "is_new": "False"
+    }
+  },
+  {
+    "model": "vehicle.singlevehicle",
+    "pk": 8,
+    "fields": {
+      "name": "Sublue WhiteShark Mix",
+      "photo": "90897e1e-40ea-436d-a674-fe95241ef239.jpg",
+      "description": "Best aquascooter, cheap and has high quality!",
+      "price": 400,
+      "year": "2019-08-24",
+      "horse_power": 10,
+      "engine_cc": 50,
+      "vehicle_type": 3,
+      "vehicle_appointment": "Water",
+      "condition": "Factory New",
+      "is_new": "True"
+    }
+  },
+  {
+    "model": "vehicle.singlevehicle",
+    "pk": 9,
+    "fields": {
+      "name": "Faeta",
+      "photo": "06953e1e-40ea-436d-a674-fe95241ef239.jpg",
+      "description": "Perfect plane, but the price is off beacause of the scratch on the window!",
+      "price": 150000,
+      "year": "2012-08-24",
+      "horse_power": 500,
+      "engine_cc": 6000,
+      "vehicle_type": 4,
+      "vehicle_appointment": "Air",
+      "condition": "Factory New",
+      "is_new": "True"
+    }
+  },
+  {
+    "model": "vehicle.singlevehicle",
+    "pk": 10,
+    "fields": {
+      "name": "Robinson R44",
+      "photo": "86978e1e-40ea-436d-a674-fe95241ef239.jpg",
+      "description": "Perfect chop",
+      "price": 120500,
+      "year": "2015-08-24",
+      "horse_power": 600,
+      "engine_cc": 6500,
+      "vehicle_type": 4,
+      "vehicle_appointment": "Air",
+      "condition": "Factory New",
+      "is_new": "True"
     }
   }
 ]
