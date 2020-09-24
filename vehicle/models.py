@@ -5,7 +5,7 @@ from Auto_marketplace import settings
 
 class VehicleType(models.Model):
     name = models.CharField(max_length=124)
-    photo = models.ImageField(upload_to='media/vehicletype', default=settings.VEHICLE_TYPE_DEFAULT_COVER_PATH)
+    photo = models.ImageField(upload_to='vehicletype', default=settings.VEHICLE_DEFAULT_COVER_PATH)
     description = models.TextField(blank=True)
 
     def __str__(self):
@@ -19,7 +19,7 @@ appointment_choice = (
 )
 
 condition_choice = (
-    ('FactoryNew', 'FactoryNew'),
+    ('Factory New', 'Factory New'),
     ('Minimal Wear', 'Minimal Wear'),
     ('Field Tested', 'Field Tested'),
     ('Battle Scarred', 'Battle Scarred')
@@ -28,7 +28,7 @@ condition_choice = (
 
 class SingleVehicle(models.Model):
     name = models.CharField(max_length=50)
-    photo = models.ImageField(upload_to='media/vehicles', default=settings.VEHICLE_DEFAULT_COVER_PATH)
+    photo = models.ImageField(upload_to='vehicles', default=settings.VEHICLE_DEFAULT_COVER_PATH)
     description = models.TextField(max_length=500)
     price = models.IntegerField()
     year = models.DateField()

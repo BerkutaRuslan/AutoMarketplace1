@@ -142,8 +142,7 @@ EMAIL_HOST_PASSWORD = os.environ.get('SENDGRID_API_KEY')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 MEDIA_URL = '/media/'
 UPLOAD_DIR = MEDIA_ROOT
-VEHICLE_DEFAULT_COVER_PATH = 'vehicle/default.png'
-VEHICLE_TYPE_DEFAULT_COVER_PATH = 'vehicle_type/default.png'
+VEHICLE_DEFAULT_COVER_PATH = 'vehicles/default.jpg'
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
