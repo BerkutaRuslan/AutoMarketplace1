@@ -4,7 +4,6 @@ from drf_yasg import openapi
 from drf_yasg.utils import swagger_auto_schema
 from rest_framework.response import Response
 from rest_framework import status
-from rest_framework.exceptions import ValidationError
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.views import APIView
 from rest_framework.authtoken.models import Token
@@ -94,7 +93,6 @@ class SignInVerifyView(APIView):
         security=[],
         tags=['accounts'],
     )
-
     def post(self, request):
         serializer = self.serializer_class(data=request.data, partial=True)
         if serializer.is_valid():
