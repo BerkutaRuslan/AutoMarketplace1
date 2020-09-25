@@ -1,5 +1,7 @@
 from django.shortcuts import get_object_or_404
 from django.utils import timezone
+from drf_yasg import openapi
+from drf_yasg.utils import swagger_auto_schema
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.exceptions import ValidationError
@@ -18,10 +20,27 @@ from accounts.utils import send_sms_code
 class SignInRequestView(APIView):
     """
       Sign In first step - phone verification
-      """
+    """
     permission_classes = (AllowAny,)
     serializer_class = SignInRequestSerializer
 
+    @swagger_auto_schema(
+        operation_id="Sign In Request",
+        request_body=openapi.Schema(
+            type=openapi.TYPE_OBJECT,
+            required=['username'],
+            properties={
+                'username': openapi.Schema(type=openapi.TYPE_STRING, description='username as user\'s phone')
+            },
+        ),
+        responses={
+            200: UserPhoneSerializer,
+            201: UserPhoneSerializer,
+            400: "Invalid phone number"
+        },
+        security=[],
+        tags=['accounts'],
+    )
     def post(self, request):
         request_time = timezone.now()
         serializer = self.serializer_class(data=request.data)
@@ -57,6 +76,25 @@ class SignInVerifyView(APIView):
     permission_classes = (AllowAny,)
     serializer_class = SignInVerifySerializer
 
+    @swagger_auto_schema(
+        operation_id="Sign In Verify",
+        request_body=openapi.Schema(
+            type=openapi.TYPE_OBJECT,
+            required=['phone', 'passcode'],
+            properties={
+                'phone': openapi.Schema(type=openapi.TYPE_STRING, description='user\'s  phone in international format'),
+                'passcode': openapi.Schema(type=openapi.TYPE_STRING, description='code from SMS'),
+            },
+        ),
+        responses={
+            200: UserPhoneSerializer,
+            201: UserPhoneSerializer,
+            400: "Incorrect passcode or invalid phone number"
+        },
+        security=[],
+        tags=['accounts'],
+    )
+
     def post(self, request):
         serializer = self.serializer_class(data=request.data, partial=True)
         if serializer.is_valid():
@@ -83,7 +121,21 @@ class UserProfileSetupView(APIView):
     permission_classes = [IsAuthenticated]
     serializer_class = UserUpdateSerializer
 
-    def post(self, request):
+    @swagger_auto_schema(
+        operation_id="Setup Profile",
+        operation_description="Save Profile info after successful Sign In",
+        request_body=openapi.Schema(
+            type=openapi.TYPE_OBJECT,
+            required=['email', 'full_name'],
+            properties={
+                'email': openapi.Schema(type=openapi.TYPE_STRING),
+                'full_name': openapi.Schema(type=openapi.TYPE_STRING),
+            },
+        ),
+        security=[],
+        tags=['accounts'],
+    )
+    def put(self, request):
         serializer = self.serializer_class(instance=request.user, data=request.data)
         if serializer.is_valid():
             user = serializer.save()
@@ -100,11 +152,38 @@ class UserProfileView(APIView):
     permission_classes = [IsAuthenticated]
     serializer_class = UserFullSerializer
 
+    @swagger_auto_schema(
+        operation_id="Get User's Profile",
+        operation_description="Retrieve User's Profile",
+        security=[],
+        tags=['accounts'],
+        responses={
+            200: UserFullSerializer,
+            400: "Invalid token"
+        },
+    )
     def get(self, request):
         user = request.user
         data = self.serializer_class(user).data
         return Response({'user': data}, status=status.HTTP_200_OK)
 
+    @swagger_auto_schema(
+        operation_id='Update Profile',
+        operation_description="Update Profile info (first name, last name or email)",
+        request_body=openapi.Schema(
+            type=openapi.TYPE_OBJECT,
+            properties={
+                'email': openapi.Schema(type=openapi.TYPE_STRING),
+                'full_name': openapi.Schema(type=openapi.TYPE_STRING),
+            },
+        ),
+        responses={
+            200: UserFullSerializer,
+            400: "Invalid user info or token"
+        },
+        security=[],
+        tags=['accounts'],
+    )
     def put(self, request):
         serializer = UserUpdateSerializer(instance=request.user, data=request.data, partial=True)
         if serializer.is_valid():
