@@ -12,7 +12,7 @@ class VehicleType(models.Model):
         return self.name
 
 
-appointment_choice = (
+purpose_choice = (
     ('Road', 'Road'),
     ('Water', 'Water'),
     ('Air', 'Air')
@@ -36,7 +36,7 @@ class SingleVehicle(models.Model):
     engine_cc = models.IntegerField()
     color = ColorField(default='FF0000')
     vehicle_type = models.ForeignKey(VehicleType, related_name='vehicle', on_delete=models.CASCADE)
-    vehicle_appointment = models.CharField(choices=appointment_choice, max_length=20, default='Road')
+    vehicle_purpose = models.CharField(choices=purpose_choice, max_length=20, default='Road')
     condition = models.CharField(choices=condition_choice, max_length=40, default='Minimal Wear')
     is_new = models.BooleanField(default=False)
 

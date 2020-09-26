@@ -10,7 +10,7 @@ class AdminVehicleType(admin.ModelAdmin):
 
 class AdminSingleVehicle(admin.ModelAdmin):
     list_display = ('name', 'price', 'year', 'horse_power', 'color', 'engine_cc',
-                    'vehicle_appointment', 'condition', 'is_new')
+                    'vehicle_purpose', 'condition', 'is_new')
 
 
 admin.site.register(VehicleType, AdminVehicleType)

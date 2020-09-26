@@ -47,7 +47,7 @@
       "horse_power": 90,
       "engine_cc": 1600,
       "vehicle_type": 1,
-      "vehicle_appointment": "Road",
+      "vehicle_purpose": "Road",
       "condition": "Minimal Wear",
       "is_new": "False",
       "color": "#2C3B7A"
@@ -65,7 +65,7 @@
       "horse_power": 210,
       "engine_cc": 2000,
       "vehicle_type": 1,
-      "vehicle_appointment": "Road",
+      "vehicle_purpose": "Road",
       "condition": "Field Tested",
       "is_new": "False",
       "color": "#FF41A2"
@@ -83,7 +83,7 @@
       "horse_power": 540,
       "engine_cc": 2400,
       "vehicle_type": 1,
-      "vehicle_appointment": "Road",
+      "vehicle_purpose": "Road",
       "condition": "Minimal Wear",
       "is_new": "False",
       "color": "#217CFF"
@@ -101,7 +101,7 @@
       "horse_power": 300,
       "engine_cc": 4200,
       "vehicle_type": 1,
-      "vehicle_appointment": "Road",
+      "vehicle_purpose": "Road",
       "condition": "Factory New",
       "is_new": "True",
       "color": "#FFF8FA"
@@ -119,7 +119,7 @@
       "horse_power": 9,
       "engine_cc": 125,
       "vehicle_type": 2,
-      "vehicle_appointment": "Road",
+      "vehicle_purpose": "Road",
       "condition": "Factory New",
       "is_new": "True",
       "color": "#FFF609"
@@ -137,7 +137,7 @@
       "horse_power": 60,
       "engine_cc": 690,
       "vehicle_type": 2,
-      "vehicle_appointment": "Road",
+      "vehicle_purpose": "Road",
       "condition": "Factory New",
       "is_new": "True",
       "color": "#FF7043"
@@ -155,7 +155,7 @@
       "horse_power": 30,
       "engine_cc": 600,
       "vehicle_type": 3,
-      "vehicle_appointment": "Water",
+      "vehicle_purpose": "Water",
       "condition": "Field Tested",
       "is_new": "False",
       "color": "#0F0AFF"
@@ -173,7 +173,7 @@
       "horse_power": 10,
       "engine_cc": 50,
       "vehicle_type": 3,
-      "vehicle_appointment": "Water",
+      "vehicle_purpose": "Water",
       "condition": "Factory New",
       "is_new": "True",
       "color": "#7AFFF1"
@@ -191,7 +191,7 @@
       "horse_power": 500,
       "engine_cc": 6000,
       "vehicle_type": 4,
-      "vehicle_appointment": "Air",
+      "vehicle_purpose": "Air",
       "condition": "Factory New",
       "is_new": "True",
       "color": "#FF2150"
@@ -209,7 +209,7 @@
       "horse_power": 600,
       "engine_cc": 6500,
       "vehicle_type": 4,
-      "vehicle_appointment": "Air",
+      "vehicle_purpose": "Air",
       "condition": "Factory New",
       "is_new": "True",
       "color": "#861AFF"
