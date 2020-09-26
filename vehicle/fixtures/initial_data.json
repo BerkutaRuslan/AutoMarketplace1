@@ -40,7 +40,7 @@
     "pk": 1,
     "fields": {
       "name": "Ford Focus 2",
-      "photo": "each_vehicle/93030e1e-40ea-436d-a674-fe95241ef239.jpg",
+      "photo": "vehicles/93030e1e-40ea-436d-a674-fe95241ef239.jpg",
       "description": "Cool & budget car for young people!",
       "price": 3500,
       "year": "2007-08-24",
