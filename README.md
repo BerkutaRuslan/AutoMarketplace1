@@ -1,7 +1,7 @@
 ## General info
 AutoMarketplace API made with Django Rest Framework
 
-# Docs
+## Docs
 https://documenter.getpostman.com/view/12856650/TVKFyvSx
 
 ## Technologies
